@@ -10,5 +10,4 @@
 + Everything is from scratch .
 + This is fully Front-end .
 + No Frameworks used at all , as i said everything from 0.
-+ Feel Free to do whatever you want with it .
-+ it's under MIT license .
++ Feel Free to do whatever you want with it (**MIT**).
