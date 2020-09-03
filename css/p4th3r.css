@@ -19,6 +19,8 @@ body{
 .Head{
 
     padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #000;
 }
 
 button{
@@ -32,14 +34,14 @@ button{
 
 #map {
 
-    margin: 100px ;
     background-color: transparent;
-    display: flex;
+    display:  flex;
     cursor: cell;
     flex-wrap: wrap;
-}
+    margin-top: 100px;
 
-
+  }
+ 
 /* #map{
     margin: 100px ;
     cursor: cell;
@@ -51,7 +53,6 @@ button{
 {
     width:  20px;
     height: 20px;
-    float:left;
     background-color: #111;
     border: 1px solid #555;
-}
+ }
