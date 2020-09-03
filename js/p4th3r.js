@@ -2,7 +2,7 @@
 // Change on your need :)
 const DEFAULT_MAP_DIVS_SIZE         = 20
 const DEFAULT_MAP_DIVS_BORDER_SIZE  = 1
- TOTAL_DIVS                      = 1000
+TOTAL_DIVS                          = 1000
 
 
 //// DO NOT TOUCH THESE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -32,17 +32,22 @@ function ScreenSizeChanged()
 
 }
 
+LAST_n = 1;
 
-
+function change_color(ele) 
+{
+    ele.style.backgroundColor = "yellowgreen";
+    ele.innerText = LAST_n++;
+}
 
 // DrawMap func
 function DrawMap() 
 {
     MapContainer.innerHTML = null;
     
-    for (let index = 0; index < MATRICE.length; index++) 
+    for (let index = 0; index < 1000; index++) 
     {
-        MapContainer.innerHTML += "<div style='border:"+DEFAULT_MAP_DIVS_BORDER_SIZE+"px solid #555;height:"+DEFAULT_MAP_DIVS_SIZE+"px;width:"+DEFAULT_MAP_DIVS_SIZE+"px;' _c='"+index+"' _r='' ></div>";
+        MapContainer.innerHTML += "<div onclick=\"change_color(this)\" style='border:"+DEFAULT_MAP_DIVS_BORDER_SIZE+"px solid #555;height:"+DEFAULT_MAP_DIVS_SIZE+"px;width:"+DEFAULT_MAP_DIVS_SIZE+"px;' _val='?' _c='"+index+"' _r='' ></div>";
     }
 }
 
@@ -56,18 +61,17 @@ function EditMap(browserClientWidth)
 
     var _tmp = dpr - (TOTAL_DIVS % dpr);
 
-    if (_tmp === dpr) 
+    if (_tmp == dpr) 
     {
-        console.log("+ Matrice is Valid !");     
+        console.log("+ MATRICE VALID !"+ _tmp);
     } 
     else 
     {
         console.log("+ Should add "+_tmp);
-        TOTAL_DIVS = _INITIAL_DIVS + _tmp;
     }
  
-    Reset(_tmp+dpr)
-    DrawMap()
+    //Reset(_tmp+dpr)
+    //DrawMap()
 }
 
 // reset the map
@@ -85,8 +89,10 @@ function Reset(new_dpr)
             col = 1;
             row += 1;
         }
-        col++;
+        else col++;
     }
+
+    console.log(MATRICE)
 }
 
 // Init Func Called when page fully loaded
@@ -95,6 +101,6 @@ function Init()
 
     window.addEventListener('resize', () => ScreenSizeChanged())
 
-    if (MapContainer) ScreenSizeChanged();
+    if (MapContainer) DrawMap();
     else alert("Could not find Map element !")
 }
