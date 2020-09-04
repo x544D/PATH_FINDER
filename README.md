@@ -10,7 +10,6 @@
 
 >Notes:
 
-+ Everything is from scratch .
++ This Repl uses jQuery , rest is made from scratch .
 + This is fully Front-end .
-+ No Frameworks used at all , as i said everything from 0.
 + Feel Free to do whatever you want with it (**MIT**).
