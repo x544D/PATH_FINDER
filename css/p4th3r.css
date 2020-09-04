@@ -64,18 +64,18 @@ div p{
     
     margin: auto;
     background-color: #000;
-    border: burlywood solid 4px;
+	border: green solid 1px;  
     max-width: 960px;
     max-height:auto;
     display: grid;
     grid-template-columns: repeat(60, minmax(2px, 1fr));
 }
 
-#map > div {
- 
-    border: 0.01px solid;
-    color: #fff;
-  }
+#map > div 
+{ 
+	background-color:#111;
+	margin: 1px;
+}
 
 
 #map > div::before {
