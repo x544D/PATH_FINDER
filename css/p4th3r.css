@@ -65,10 +65,10 @@ div p{
     margin: auto;
     background-color: #000;
     border: burlywood solid 4px;
-    max-width: 800px;
+    max-width: 960px;
     max-height:auto;
     display: grid;
-    grid-template-columns: repeat(30, minmax(10px, 0fr));
+    grid-template-columns: repeat(60, minmax(2px, 1fr));
 }
 
 #map > div {
