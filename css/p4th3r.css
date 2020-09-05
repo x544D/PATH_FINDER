@@ -1,63 +1,123 @@
+@font-face{
+    font-family: corrupted;
+    src: url('../fonts/Corrupted\ File.ttf') format('embedded-opentype'),
+    url('../fonts/Corrupted\ File.ttf') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/Corrupted\ File.ttf') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/Corrupted\ File.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Corrupted\ File.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face{
+    font-family: hacker;
+    src: url('../fonts/Elite\ Hacker\ \(Corroded\).ttf') format('embedded-opentype'),
+    url('../fonts/Elite\ Hacker\ \(Corroded\).ttf') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/Elite\ Hacker\ \(Corroded\).ttf') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/Elite\ Hacker\ \(Corroded\).ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Elite\ Hacker\ \(Corroded\).ttf') format('svg'); /* Legacy iOS */
+}
+
+@keyframes blink
+{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:  'Courier New', Courier, monospace;
     font-size: 12px;
     color: black;
+    cursor: url(../imgs/cr.png)  0 0, default;
 
 }
 body{
     background-color: black;
-    min-height: 800px;
-    
 }
+
 #wraper
 {
-    background-color: black ;
-    height: 100vh;
 }
+
+
+H1
+{
+    font-size: 50px;
+    color: green;
+    font-weight: normal;
+    text-align: center;
+    margin-top:  60px ;
+    margin-bottom: 20px ;
+}
+
+
 .Head{
-    margin: 60px;
-    padding: 10px;
-    border: #fff dotted 1px;
-    
-
+    margin: auto;
+	border: green solid 1px;  
+    max-width: 960px;
+    max-height:auto;
+    margin-bottom: 40px ;
 }
 
-#btnshow{
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.corrupted
+{
+    font-family: 'corrupted' !important;
+}
+
+.SpecialBtn
+{
+    background-color: transparent;
+    color: green;
+}
+
+o
+{
+    margin-left: 5px;
+    color: greenyellow;
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+._b x{
+    animation: blink .7s infinite;
+    font-family: 'hacker';
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: black;    
+}
+
+button{
+
+    font-size: 18px;
     letter-spacing: 2px;
     padding:2px 10px 2px 10px;
-    background-color: yellowgreen;
+    background-color: green;
     border: 0;
-    color: black;
-    cursor: pointer;
+    color: black;    
+    /* cursor: pointer; */
+    font-family: 'hacker';
+    outline: none;
+    border-radius: 0;
 }
 
-#btnstart{
+._b
+{
 
-    letter-spacing: 2px;
     padding:2px 10px 2px 10px;
-    background-color: yellowgreen;
+    background-color: green;
     border: 0;
-    
-    cursor: pointer;
-}
-label{
-color: #fff;
-font-size: 14px;
-margin-left: 20px;
-}
-
-#Startactive , #Endactive , #Obsactive{
-    display: none;
-  
-}
-div p{
-    color: #fff;
-    padding: 20px;
-    margin: 40px ;
-    border: 1px dotted;
+    /* cursor: default; */
+    outline: none;
 }
 
 #map{
@@ -68,12 +128,21 @@ div p{
     max-width: 960px;
     max-height:auto;
     display: grid;
+    cursor: cell;
     grid-template-columns: repeat(60, minmax(2px, 1fr));
+	background-color:rgba(61, 204, 0, 0.2);
 }
 
 #map > div 
 { 
-	background-color:#111;
+	background-color:#000;
+	margin: 1px;
+    cursor: cell;
+}
+
+#map > div:active
+{ 
+	background-color:white;
 	margin: 1px;
 }
 
@@ -84,11 +153,4 @@ div p{
   content: "";
   padding-bottom: 100%;
   display: block;
-}
-
-.white{
-background-color: #fff;
-}
-.black{
-    background-color: #000;
 }
