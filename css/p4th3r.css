@@ -148,9 +148,33 @@ button{
 
 
 #map > div::before {
-  width: calc(100% / 40);
-  height: calc(100% / 40);
+  width: calc(100% / 60);
+  height: calc(100% / 60);
   content: "";
   padding-bottom: 100%;
   display: block;
+}
+
+#infos , #infos *
+{
+    color: green;
+    font-size: 11px;
+    font-family: 'tahoma';
+}
+
+#infos
+{
+    text-align: left;
+    margin: auto;
+
+    max-width: 960px;
+    max-height:auto;
+    margin-bottom: 40px ;
+}
+
+.err_p
+{
+    color:rgb(13, 214, 6);
+    animation: blink 1s 5 ease-in;
+    font-size: 20px;   
 }
