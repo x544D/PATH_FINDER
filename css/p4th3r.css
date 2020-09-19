@@ -128,31 +128,50 @@ button{
     max-width: 960px;
     max-height:auto;
     display: grid;
-    cursor: cell;
+    cursor: none;
     grid-template-columns: repeat(60, minmax(2px, 1fr));
-	background-color:rgba(61, 204, 0, 0.2);
+    background-color:rgba(61, 204, 0, 0.2);
+    outline: 0;
 }
 
 #map > div 
 { 
 	background-color:#000;
-	margin: 1px;
-    cursor: cell;
+	margin: 0px;
+    cursor: none;
+    border: 1px solid rgba(0, 128, 0, 0.26);
+    outline: 0;
+    font-size: 10px;
+    text-align: center;
+    background-size:contain;
 }
 
-#map > div:active
+/* #map > div:active
 { 
 	background-color:white;
 	margin: 1px;
+} */
+
+
+#map > div::before 
+{
+  /* width: calc(100% / 60);
+  height: calc(100% / 20);*/
+  content: ""; 
+  padding-top: 100%;
+  display: block;
 }
 
 
-#map > div::before {
-  width: calc(100% / 60);
-  height: calc(100% / 60);
-  content: "";
-  padding-bottom: 100%;
-  display: block;
+.uBtn:nth-child(3)
+{
+    background-color: green;
+}
+
+.uBtn:hover
+{
+    color: rgb(0, 255, 0);
+    cursor: cell;
 }
 
 #infos , #infos *
@@ -166,11 +185,34 @@ button{
 {
     text-align: left;
     margin: auto;
-
     max-width: 960px;
     max-height:auto;
-    margin-bottom: 40px ;
+    margin-bottom: 10px ;
+
 }
+
+#logs{
+    height: 20px; 
+    color: red;  
+}
+.protips
+{
+    display: inline-flex;
+}
+
+.protips img
+{
+    animation: blink .6s 2 ease-in;
+    margin-right: 5px;
+}
+
+.protips span
+{
+    animation: blink 2s 1 ease-in;
+    margin-right: 10px;
+    color: rgb(88, 141, 8) !important;
+}
+
 
 .err_p
 {

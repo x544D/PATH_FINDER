@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>x544D's P4TH3R</title>
+    <title>~ x544D's P4TH3R</title>
     <link rel="stylesheet" href="css/p4th3r.css">
     <script src="js/jquery-3.4.1.js"></script> 
     <script src="js/p4th3r.js"></script>
@@ -15,17 +15,34 @@
 
         <div class="Head">
             <b class='_b SpecialBtn fl'> <x class="corrupted">#</x> </b>
-            <button class="uBtn" >START</button>
+            <button class="uBtn" id="startBtn" onclick="Start_1()">START</button>
+            <button class="uBtn" onclick="Reset();" >RESET</button>
 
             <button class="SpecialBtn fr">GITHUB</button>
             <button class="SpecialBtn fr">FACEBOOK</button>
         </div>
 
-        <div id="infos">
-            INFOS GOES HERE
+        <div id="infos"  >
+            <div id="logs"></div>
+            <br> 
+            <div class="protips">
+                <img src="imgs/s.png" width="14", height="14" /> <span>START POINT</span>
+            </div>
+
+            <div class="protips">
+                <img src="imgs/e.png" width="14", height="14" /> <span>END POINT</span>
+            </div>
+
+            <div class="protips">
+                <img src="imgs/w.png" width="14", height="14" /> <span>OBSTACLES</span>
+            </div>
+            
+            <div class="protips">
+                <img src="imgs/x.png" width="14", height="14" /> <span>PRESERVED CELL</span>
+            </div>
         </div>
 
-        <div id="map" >
+        <div id="map" tabindex="0" >
         </div>
 
     </div>
