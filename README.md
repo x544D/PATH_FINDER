@@ -1,7 +1,7 @@
 ## PATH FINDING PROJECT
 #### I will work on it time to time  (Busy with other stuff) .
 
-[TEST & VISUALIZE](https://pathfinder--0x544d.repl.co) 
+[TEST & VISUALIZE](https://pathfinder.0x544d.repl.co/) 
 
 
 **Started on  : 9/2/2k20**
